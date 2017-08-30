@@ -2,7 +2,7 @@
 - name: Provision a new server with hardened SSH and basic iptables.
 
   # Specify the hosts you want to target
-  hosts: ssd-test
+  hosts: hosts
 
   # Specify the user you want to connect to the server.
   # With a new installation, you will connect with `root`. If you want to
