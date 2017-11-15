@@ -6,7 +6,7 @@ This playbook was created in conjunction with two blog posts written for the [SS
 
 [Tutorial: A More Secure Ansible Playbook, Part 1](http://blog.ssdnodes.com/blog/tutorial-a-more-secure-ansible-playbook-part-1)
 
-Part 2 is forthcoming on September 7. I'll update this README with the link as it becomes available.
+[Tutorial: A More Secure Ansible Playbook, Part 2](https://blog.ssdnodes.com/blog/tutorial-a-more-secure-ansible-playbook-part-2/)
 
 This playbook was built as an educational tool for the SSD Nodes blog. It **is not an officially supported tool**, and comes with no support other than these instructions and any discussions that might be found in the [repository issues](https://github.com/joelhans/ssdnodes-ansible-provision/issues).
 
