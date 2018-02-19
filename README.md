@@ -26,10 +26,18 @@ $ git clone https://github.com/joelhans/ssdnodes-ansible-provision.git
 
 **Generate a hashed password**.
 
-On OS X/Linux machines, run the following command, replacing `password` with your chosen password. Choosing a different salt—the text between `"$1$` and `$"`—is optional, but recommended.
+On Linux/OS X machines, you can use the following method to create a hashed password.
+
+First, you need to install the Passlib password hashing library for Python, if you don't have it already.
 
 ```
-$ python -c 'import crypt; print crypt.crypt("password", "$1$Ansible$")'
+$ pip install passlib
+```
+
+Once Passlib is installed, run the following command **after** replacing `password` with the phrase of your choosing.
+
+```
+$ python -c 'from passlib.hash import sha512_crypt; print sha512_crypt.encrypt("password")'
 ```
 
 Once you have the hashed password, you can copy it into the `vars:password` field in `provision.yml`.
@@ -46,6 +54,13 @@ If your SSH key is not in the default location—`~/.ssh/id_rsa.pub`—you will 
 
 ```
 $ ansible-playbook -k provision.yml
+```
+
+If you run into an error about `/usr/bin/python` not being found, you need to force Ansible to use `python3` on the server by adding the following flag to your Ansible hosts file:
+
+```
+[example]
+123.123.123.123 ansible_python_interpreter=/usr/bin/python3
 ```
 
 ### Re-running the playbook
