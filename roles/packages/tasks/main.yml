@@ -14,7 +14,7 @@
 - name: Install a few more packages
   package:
     name: "{{item}}"
-    state: installed
+    state: present
   with_items:
    - vim
    - htop
