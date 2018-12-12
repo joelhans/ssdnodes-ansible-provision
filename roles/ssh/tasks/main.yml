@@ -14,7 +14,7 @@
   with_items:
     - regexp: "^#?PermitRootLogin"
       line: "PermitRootLogin no"
-    - regexp: "^^#?PasswordAuthentication"
+    - regexp: "^#?PasswordAuthentication"
       line: "PasswordAuthentication no"
     - regexp: "^#?AllowAgentForwarding"
       line: "AllowAgentForwarding no"
